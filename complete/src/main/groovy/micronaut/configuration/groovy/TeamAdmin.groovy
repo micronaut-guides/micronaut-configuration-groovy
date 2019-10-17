@@ -8,6 +8,10 @@ class TeamAdmin {
     private TeamAdmin() {
     }
 
+    static Builder builder() {
+        return new Builder()
+    }
+
     static class Builder {
         String manager
         String coach
