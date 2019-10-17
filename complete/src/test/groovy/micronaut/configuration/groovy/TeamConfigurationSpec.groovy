@@ -22,4 +22,16 @@ class TeamConfigurationSpec extends Specification {
         teamConfiguration.playerNames[0] == "Nirav Assar"
         teamConfiguration.playerNames[1] == "Lionel Messi"
     }
+
+    void "test builder pattern usage"() {
+        when:
+        TeamAdmin teamAdmin = new TeamAdmin.Builder().withManager("Nirav")
+                .withCoach("Tommy")
+                .withPresident("Mark").build()
+
+        then:
+        teamAdmin.manager == "Nirav"
+        teamAdmin.coach == "Tommy"
+        teamAdmin.president == "Mark"
+    }
 }
