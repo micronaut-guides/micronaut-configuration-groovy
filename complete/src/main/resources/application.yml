@@ -1,0 +1,8 @@
+micronaut:
+  application:
+    name: micronaut-configuration-groovy
+---
+team:
+  name: 'Steelers'
+  color: 'Black'
+  player-names: ['Mason Rudolph', 'James Connor']

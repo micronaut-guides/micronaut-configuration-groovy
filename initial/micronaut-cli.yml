@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: micronaut.configuration.groovy
+---
+testFramework: spock
+sourceLanguage: groovy
