@@ -2,14 +2,19 @@ micronaut:
   application:
     name: micronaut-configuration-groovy
 ---
+# tag::allTeamConfig[]
+# tag::teamConfig[]
 team:
   name: 'Steelers'
   color: 'Black'
   player-names: ['Mason Rudolph', 'James Connor']
+# end::teamConfig[]
   team-admin:
-    manager: 'Nirav Assar'
-    coach: 'Mike Tomlin'
+    manager: 'Nirav Assar' # <1>
+    coach: 'Mike Tomlin' # <2>
     president: 'Dan Rooney'
+# end::allTeamConfig[]
+# tag::stadiumConfig[]
 stadium:
   coors:
     city: 'Denver'
@@ -17,3 +22,4 @@ stadium:
   pnc:
     city: 'Pittsburgh'
     size: 35000
+# end::stadiumConfig[]

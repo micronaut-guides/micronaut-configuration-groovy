@@ -1,3 +1,4 @@
+//tag::teamConfigClassNoBuilder[]
 package micronaut.configuration.groovy
 
 import io.micronaut.context.annotation.ConfigurationBuilder
@@ -8,6 +9,7 @@ class TeamConfiguration {
     String name
     String color
     List<String> playerNames
+//end::teamConfigClassNoBuilder[]
 
     @ConfigurationBuilder(prefixes = "with", configurationPrefix = "team-admin")
     TeamAdmin.Builder builder = TeamAdmin.builder()

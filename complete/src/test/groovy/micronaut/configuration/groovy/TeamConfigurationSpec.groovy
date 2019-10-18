@@ -1,3 +1,4 @@
+//tag::teamConfigSpecNoBuilder[]
 package micronaut.configuration.groovy
 
 import io.micronaut.context.ApplicationContext
@@ -22,6 +23,7 @@ class TeamConfigurationSpec extends Specification {
         teamConfiguration.playerNames[0] == "Nirav Assar"
         teamConfiguration.playerNames[1] == "Lionel Messi"
     }
+//end::teamConfigSpecNoBuilder[]
 
     void "test builder pattern plain usage"() {
         when:
@@ -35,6 +37,7 @@ class TeamConfigurationSpec extends Specification {
         teamAdmin.president == "Mark"
     }
 
+    //tag::teamConfigSpecBuilder[]
     void "test team configuration admin configuration builder "() {
         given:
         ApplicationContext ctx = ApplicationContext.run(ApplicationContext, [
@@ -66,4 +69,5 @@ class TeamConfigurationSpec extends Specification {
         teamAdmin.coach == "Tommy O'Neill"
         teamAdmin.president == "Mark Scanell"
     }
+    //end::teamConfigSpecBuilder[]
 }
