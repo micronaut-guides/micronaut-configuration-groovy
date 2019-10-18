@@ -1,4 +1,4 @@
-TODO: Complete the guide
+Let's validate that the bean is available in the application context and is created with the values declared in the `application.xml`.
 
 [source,groovy]
 .src/test/groovy/micronaut/configuration/groovy/TeamConfigurationSpec.groovy
