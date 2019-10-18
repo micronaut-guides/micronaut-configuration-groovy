@@ -16,7 +16,7 @@ team:
 # end::allTeamConfig[]
 # tag::stadiumConfig[]
 stadium:
-  coors:
+  coors: # <1>
     city: 'Denver'
     size: 50000
   pnc:

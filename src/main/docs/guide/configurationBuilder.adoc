@@ -1,1 +1,27 @@
 TODO: Complete the guide
+
+[source,yml]
+.src/main/resources/application.yml
+----
+include::{sourceDir}/src/main/resources/application.yml[tag=allTeamConfig]
+----
+
+[source,groovy]
+.src/main/groovy/micronaut/configuration/groovy/TeamAdmin.groovy
+----
+include::{sourceDir}/src/main/groovy/micronaut/configuration/groovy/TeamAdmin.groovy[]
+----
+
+<1> `TeamAdmin` is the configuration object with the resulting properties
+<2> The builder object used to incrementally construct the object
+<3> An example of a builder method, where a attribute is set and then the builder itself is returned.
+<4> The final `build()` method which creates the `TeamAdmin` object
+
+[source,groovy]
+.src/main/groovy/micronaut/configuration/groovy/TeamConfiguration.groovy
+----
+include::{sourceDir}/src/main/groovy/micronaut/configuration/groovy/TeamConfiguration.groovy[tag=teamConfigClassBuilder]
+----
+
+<1> `prefixes` tells Micronaut to find methods that are prefixed by `with`; `configurationPrefix` allows the developer to customize the `application.yml` element
+<2> Instantiate the builder object so it can be populated on startup

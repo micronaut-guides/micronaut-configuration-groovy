@@ -1,1 +1,10 @@
 TODO: Complete the guide
+
+[source,groovy]
+.src/test/groovy/micronaut/configuration/groovy/TeamConfigurationSpec.groovy
+----
+include::{sourceDir}/src/test/groovy/micronaut/configuration/groovy/TeamConfigurationSpec.groovy[tag=teamConfigSpecNoBuilder]
+}
+----
+
+<1> Setup configuration properties for the test to use

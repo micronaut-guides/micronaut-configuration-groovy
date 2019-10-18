@@ -1,6 +1,6 @@
 package micronaut.configuration.groovy
 
-class TeamAdmin {
+class TeamAdmin { // <1>
 
     String manager, coach, president
 
@@ -12,12 +12,12 @@ class TeamAdmin {
         return new Builder()
     }
 
-    static class Builder { // <1>
+    static class Builder { // <2>
         String manager
         String coach
         String president
 
-        // <2>
+        // <3>
         Builder withManager(String manager) {
             this.manager = manager
             this
@@ -33,7 +33,7 @@ class TeamAdmin {
             this
         }
 
-        TeamAdmin build() { // <3>
+        TeamAdmin build() { // <4>
             TeamAdmin teamAdmin = new TeamAdmin()
             teamAdmin.manager = this.manager
             teamAdmin.coach = this.coach

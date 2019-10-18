@@ -4,13 +4,13 @@ package micronaut.configuration.groovy
 import io.micronaut.context.annotation.EachProperty
 import io.micronaut.context.annotation.Parameter
 
-@EachProperty("stadium")
+@EachProperty("stadium") // <1>
 class StadiumConfiguration {
-    String name
+    String name // <2>
     String city
     Integer size
 
-    StadiumConfiguration(@Parameter String name) {
+    StadiumConfiguration(@Parameter String name) { // <2>
         this.name = name
     }
 }

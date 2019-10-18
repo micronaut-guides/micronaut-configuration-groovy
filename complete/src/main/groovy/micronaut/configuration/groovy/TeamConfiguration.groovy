@@ -1,9 +1,11 @@
-//tag::teamConfigClassNoBuilder[]
+
 package micronaut.configuration.groovy
 
 import io.micronaut.context.annotation.ConfigurationBuilder
 import io.micronaut.context.annotation.ConfigurationProperties
 
+//tag::teamConfigClassBuilder[]
+//tag::teamConfigClassNoBuilder[]
 @ConfigurationProperties("team")
 class TeamConfiguration {
     String name
@@ -11,6 +13,7 @@ class TeamConfiguration {
     List<String> playerNames
 //end::teamConfigClassNoBuilder[]
 
-    @ConfigurationBuilder(prefixes = "with", configurationPrefix = "team-admin")
-    TeamAdmin.Builder builder = TeamAdmin.builder()
+    @ConfigurationBuilder(prefixes = "with", configurationPrefix = "team-admin") // <1>
+    TeamAdmin.Builder builder = TeamAdmin.builder() // <2>
 }
+//end::teamConfigClassBuilder[]

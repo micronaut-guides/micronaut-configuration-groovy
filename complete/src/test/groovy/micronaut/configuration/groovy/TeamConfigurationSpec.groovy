@@ -1,4 +1,4 @@
-//tag::teamConfigSpecNoBuilder[]
+
 package micronaut.configuration.groovy
 
 import io.micronaut.context.ApplicationContext
@@ -6,9 +6,10 @@ import spock.lang.Specification
 
 class TeamConfigurationSpec extends Specification {
 
+    //tag::teamConfigSpecNoBuilder[]
     void "test team configuration"() {
         given:
-        ApplicationContext ctx = ApplicationContext.run(ApplicationContext, [
+        ApplicationContext ctx = ApplicationContext.run(ApplicationContext, [ // <1>
                 "team.name": 'evolution',
                 "team.color": 'green',
                 "team.player-names": ['Nirav Assar', 'Lionel Messi']
@@ -23,7 +24,7 @@ class TeamConfigurationSpec extends Specification {
         teamConfiguration.playerNames[0] == "Nirav Assar"
         teamConfiguration.playerNames[1] == "Lionel Messi"
     }
-//end::teamConfigSpecNoBuilder[]
+    //end::teamConfigSpecNoBuilder[]
 
     void "test builder pattern plain usage"() {
         when:
@@ -44,14 +45,14 @@ class TeamConfigurationSpec extends Specification {
                 "team.name": 'evolution',
                 "team.color": 'green',
                 "team.player-names": ['Nirav Assar', 'Lionel Messi'],
-                "team.team-admin.manager": "Jerry Jones",
+                "team.team-admin.manager": "Jerry Jones", // <1>
                 "team.team-admin.coach": "Tommy O'Neill",
                 "team.team-admin.president": "Mark Scanell"
         ])
 
         when:
         TeamConfiguration teamConfiguration = ctx.getBean(TeamConfiguration)
-        TeamAdmin teamAdmin = teamConfiguration.builder.build()
+        TeamAdmin teamAdmin = teamConfiguration.builder.build() // <2>
 
         then:
         teamConfiguration.name == "evolution"
@@ -65,7 +66,7 @@ class TeamConfigurationSpec extends Specification {
         teamConfiguration.builder.president == "Mark Scanell"
 
         // check the object can be built
-        teamAdmin.manager == "Jerry Jones"
+        teamAdmin.manager == "Jerry Jones" // <3>
         teamAdmin.coach == "Tommy O'Neill"
         teamAdmin.president == "Mark Scanell"
     }

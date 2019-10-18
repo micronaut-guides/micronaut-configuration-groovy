@@ -1,1 +1,18 @@
 TODO: Complete the guide
+
+[source,yml]
+.src/main/resources/application.yml
+----
+include::{sourceDir}/src/main/resources/application.yml[tag=stadiumConfig]
+----
+
+<1> This element will be the name of the bean
+
+[source,groovy]
+.src/main/groovy/micronaut/configuration/groovy/StadiumConfiguration.groovy
+----
+include::{sourceDir}/src/main/groovy/micronaut/configuration/groovy/StadiumConfiguration.groovy[]
+----
+
+<1> Establish the top layer of configuration
+<2> `name` is read in from the property key and send as a parameter to the bean.

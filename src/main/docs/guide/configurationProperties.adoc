@@ -5,3 +5,10 @@ TODO: Complete the guide
 ----
 include::{sourceDir}/src/main/resources/application.yml[tag=teamConfig]
 ----
+
+[source,groovy]
+.src/main/groovy/micronaut/configuration/groovy/TeamConfiguration.groovy
+----
+include::{sourceDir}/src/main/groovy/micronaut/configuration/groovy/TeamConfiguration.groovy[tag=teamConfigClassNoBuilder]
+}
+----
