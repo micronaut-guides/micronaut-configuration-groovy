@@ -15,4 +15,6 @@ eachProperty:
   eachPropertyTest: Test @EachProperty
 runningTheApp:
   title: Running the Application
+controller:
+  title: Controller
 next: Where To Go From Here?
