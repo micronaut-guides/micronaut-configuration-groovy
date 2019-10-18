@@ -11,7 +11,7 @@ team:
 # end::teamConfig[]
   team-admin:
     manager: 'Nirav Assar' # <1>
-    coach: 'Mike Tomlin' # <2>
+    coach: 'Mike Tomlin'
     president: 'Dan Rooney'
 # end::allTeamConfig[]
 # tag::stadiumConfig[]
