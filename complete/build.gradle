@@ -11,7 +11,7 @@ group "micronaut.configuration.groovy"
 
 repositories {
     mavenCentral()
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url "https://jcenter.bintray.com" }
 }
 
 configurations {
@@ -25,8 +25,8 @@ dependencies {
     implementation platform("io.micronaut:micronaut-bom:$micronautVersion")
     implementation "io.micronaut:micronaut-runtime-groovy"
     implementation "io.micronaut:micronaut-validation"
-    implementation "io.micronaut:micronaut-http-client"
     implementation "io.micronaut:micronaut-http-server-netty"
+    implementation "io.micronaut:micronaut-http-client"
     runtimeOnly "ch.qos.logback:logback-classic:1.2.3"
     testCompileOnly platform("io.micronaut:micronaut-bom:$micronautVersion")
     testImplementation platform("io.micronaut:micronaut-bom:$micronautVersion")
@@ -42,11 +42,9 @@ dependencies {
 test.classpath += configurations.developmentOnly
 
 mainClassName = "micronaut.configuration.groovy.Application"
-
 tasks.withType(GroovyCompile) {
     groovyOptions.forkOptions.jvmArgs.add('-Dgroovy.parameters=true')
 }
-
 
 shadowJar {
     mergeServiceFiles()
