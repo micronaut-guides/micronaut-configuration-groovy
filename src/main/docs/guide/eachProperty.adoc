@@ -1,4 +1,5 @@
-TODO: Complete the guide
+Micronaut is also able to read a "list" of configurations that are related. Imagine we would like to declare stadiums and their
+attributes.
 
 [source,yml]
 .src/main/resources/application.yml
@@ -6,7 +7,10 @@ TODO: Complete the guide
 include::{sourceDir}/src/main/resources/application.yml[tag=stadiumConfig]
 ----
 
-<1> This element will be the name of the bean
+<1> This element will be the name of the bean.
+
+We can use `@EachProperty` which will cycle through the configuration and read each nested clause as a bean. The higher level
+property will be parameterized as the name.
 
 [source,groovy]
 .src/main/groovy/micronaut/configuration/groovy/StadiumConfiguration.groovy
