@@ -15,7 +15,8 @@ class MyController {
     TeamConfiguration teamConfiguration
     StadiumConfiguration stadiumConfiguration
 
-    MyController(@Nullable TeamConfiguration teamConfiguration, @Nullable @Named("pnc") StadiumConfiguration stadiumConfiguration) { // <1>
+    MyController(TeamConfiguration teamConfiguration,
+                 @Named("pnc") StadiumConfiguration stadiumConfiguration) { // <1>
         this.teamConfiguration = teamConfiguration
         this.stadiumConfiguration = stadiumConfiguration
     }
