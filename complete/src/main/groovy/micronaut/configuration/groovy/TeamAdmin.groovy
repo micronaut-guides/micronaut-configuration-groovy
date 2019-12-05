@@ -1,8 +1,13 @@
 package micronaut.configuration.groovy
 
+import groovy.transform.CompileStatic
+
+@CompileStatic
 class TeamAdmin { // <1>
 
-    String manager, coach, president
+    String manager
+    String coach
+    String president
 
     // should use the builder pattern to create the object
     private TeamAdmin() {
