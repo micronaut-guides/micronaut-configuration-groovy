@@ -1,3 +1,1 @@
-The app was created with Micronaut CLI using the `--lang groovy` flag. The `/initial` folder was created as such so you as a developer
-can follow along with the coding steps.
-
+include::{commondir}/common-create-app-groovy.adoc[]
