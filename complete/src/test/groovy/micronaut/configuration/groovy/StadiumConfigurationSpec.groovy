@@ -25,5 +25,8 @@ class StadiumConfigurationSpec extends Specification {
         fenwayConfiguration.size == 60000
         wrigleyConfiguration.name == "wrigley"
         wrigleyConfiguration.size == 45000
+
+        cleanup:
+        ctx.close()
     }
 }

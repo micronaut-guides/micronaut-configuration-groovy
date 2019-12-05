@@ -23,6 +23,9 @@ class TeamConfigurationSpec extends Specification {
         teamConfiguration.color == "green"
         teamConfiguration.playerNames[0] == "Nirav Assar"
         teamConfiguration.playerNames[1] == "Lionel Messi"
+
+        cleanup:
+        ctx.close()
     }
     //end::teamConfigSpecNoBuilder[]
 
@@ -69,6 +72,9 @@ class TeamConfigurationSpec extends Specification {
         teamAdmin.manager == "Jerry Jones" // <3>
         teamAdmin.coach == "Tommy O'Neill"
         teamAdmin.president == "Mark Scanell"
+
+        cleanup:
+        ctx.close()
     }
     //end::teamConfigSpecBuilder[]
 }
