@@ -21,12 +21,12 @@ class MyController {
     }
 
     @Get("/team")
-    HttpResponse<TeamConfiguration> team() {
-        return HttpResponse.ok(this.teamConfiguration)
+    TeamConfiguration team() {
+        this.teamConfiguration
     }
 
     @Get("/stadium")
-    HttpResponse<StadiumConfiguration> stadium() {
-        return HttpResponse.ok(this.stadiumConfiguration)
+    StadiumConfiguration stadium() {
+        this.stadiumConfiguration
     }
 }
