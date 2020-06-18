@@ -1,5 +1,5 @@
 
-package micronaut.configuration.groovy
+package example.micronaut
 
 import io.micronaut.context.annotation.ConfigurationBuilder
 import io.micronaut.context.annotation.ConfigurationProperties

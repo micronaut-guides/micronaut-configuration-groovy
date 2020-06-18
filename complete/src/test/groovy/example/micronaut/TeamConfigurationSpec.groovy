@@ -1,6 +1,8 @@
 
-package micronaut.configuration.groovy
+package example.micronaut
 
+import example.micronaut.TeamAdmin
+import example.micronaut.TeamConfiguration
 import io.micronaut.context.ApplicationContext
 import spock.lang.Specification
 

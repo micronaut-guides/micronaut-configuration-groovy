@@ -2,9 +2,9 @@ Validate the configuration with a test. Notice multiple beans are created from t
 inject a particular `StadiumConfiguration` instance bean by using the `@Named` parameter with qualifier name.
 
 [source,groovy]
-.src/test/groovy/micronaut/configuration/groovy/StadiumConfigurationSpec.groovy
+.src/test/groovy/example/micronaut/StadiumConfigurationSpec.groovy
 ----
-include::{sourceDir}/src/test/groovy/micronaut/configuration/groovy/StadiumConfigurationSpec.groovy[]
+include::{sourceDir}/src/test/groovy/example/micronaut/StadiumConfigurationSpec.groovy[]
 ----
 
 <1> Multiple configurations can be declared for the same class.
