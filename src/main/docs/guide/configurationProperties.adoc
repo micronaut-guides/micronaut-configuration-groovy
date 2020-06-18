@@ -11,8 +11,8 @@ With Micronaut we can use the `@ConfigurationProperties` annotation to slurp the
 the configuration in the `application.yml` will call the setter in the bean. The bean will be subsequently available for injection in the application!
 
 [source,groovy]
-.src/main/groovy/micronaut/configuration/groovy/TeamConfiguration.groovy
+.src/main/groovy/example/micronaut/TeamConfiguration.groovy
 ----
-include::{sourceDir}/src/main/groovy/micronaut/configuration/groovy/TeamConfiguration.groovy[tag=teamConfigClassNoBuilder]
+include::{sourceDir}/src/main/groovy/example/micronaut/TeamConfiguration.groovy[tag=teamConfigClassNoBuilder]
 }
 ----

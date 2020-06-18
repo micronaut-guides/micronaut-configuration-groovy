@@ -1,4 +1,4 @@
-package micronaut.configuration.groovy
+package example.micronaut
 
 import groovy.transform.CompileStatic
 

@@ -3,9 +3,9 @@ create a controller where the beans are constructor injected. The `StadiumConfig
 instances, so for injection we need to use the `@Named` annotation with a qualifier name to specify the bean.
 
 [source,groovy]
-.src/main/groovy/micronaut/configuration/groovy/MyController.groovy
+.src/main/groovy/example/micronaut/MyController.groovy
 ----
-include::{sourceDir}/src/main/groovy/micronaut/configuration/groovy/MyController.groovy[]
+include::{sourceDir}/src/main/groovy/example/micronaut/MyController.groovy[]
 ----
 
 <1> Injection of configuration beans; `@Named` annotation is needed to choose which `StadiumConfiguration` instance is retrieved.

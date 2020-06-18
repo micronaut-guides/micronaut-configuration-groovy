@@ -13,9 +13,9 @@ We can use `@EachProperty` which will cycle through the configuration and read e
 property will be parameterized as the name.
 
 [source,groovy]
-.src/main/groovy/micronaut/configuration/groovy/StadiumConfiguration.groovy
+.src/main/groovy/example/micronaut/StadiumConfiguration.groovy
 ----
-include::{sourceDir}/src/main/groovy/micronaut/configuration/groovy/StadiumConfiguration.groovy[]
+include::{sourceDir}/src/main/groovy/example/micronaut/StadiumConfiguration.groovy[]
 ----
 
 <1> Establish the top layer of configuration

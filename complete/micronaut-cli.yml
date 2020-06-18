@@ -1,8 +1,6 @@
-profile: service
 applicationType: default
-defaultPackage: micronaut.configuration.groovy
----
+defaultPackage: example.micronaut
 testFramework: spock
 sourceLanguage: groovy
 buildTool: gradle
-features: [app-name, docker, file-watch, gradle, groovy, groovy-application, http-client, logback, netty-server, readme, shade, spock, yaml]
+features: [annotation-api, app-name, docker, file-watch, gradle, groovy, groovy-application, http-client, logback, netty-server, readme, shade, spock, yaml]
